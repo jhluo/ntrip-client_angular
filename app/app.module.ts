@@ -3,8 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
+import { WebSocketService } from './services/websocket.service';
+
 import { AppComponent }  from './app.component';
 import { CasterFormComponent } from './caster-form.component';
+
 
 @NgModule({
   imports:      [ 
@@ -14,7 +17,8 @@ import { CasterFormComponent } from './caster-form.component';
     ],
   declarations: [ 
     AppComponent,
-    CasterFormComponent
+    CasterFormComponent,
+    WebSocketService
     ],
   bootstrap:    [ AppComponent ]
 })
