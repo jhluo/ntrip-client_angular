@@ -1,25 +1,27 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpModule }    from '@angular/http';
+import { FormsModule,
+         ReactiveFormsModule } from '@angular/forms';
 
 import { WebSocketService } from './services/websocket.service';
 
 import { AppComponent }  from './app.component';
-import { CasterFormComponent } from './caster-form.component';
+import { ClientFormComponent } from './client-form.component';
 
 
 @NgModule({
   imports:      [ 
     BrowserModule,
     FormsModule,
-    HttpModule
+    ReactiveFormsModule
     ],
   declarations: [ 
     AppComponent,
-    CasterFormComponent,
-    WebSocketService
+    ClientFormComponent
     ],
+  providers: [
+    WebSocketService
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
